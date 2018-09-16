@@ -21,19 +21,50 @@ public class fecha {
     public fecha(){
      Calendar f = Calendar.getInstance();
      this.año   = f.get(Calendar.YEAR);
-     this.mes = f.get(Calendar.MONTH);
+     this.mes = f.get(Calendar.MONTH)+1;
      this.dia = f.get(Calendar.DAY_OF_MONTH);
-
-    
-     
+ 
      
     
     } 
-  
+
+    public int getDia() {
+        return dia;
+    }
+
+    public void setDia(int dia) {
+        this.dia = dia;
+    }
+
+    public int getMes() {
+        return mes;
+    }
+
+    public void setMes(int mes) {
+        this.mes = mes;
+    }
+    
+    public int diasVividos(String f_nac){
+         int ed= edad(java.sql.Date.valueOf(f_nac));
+        return ed*365;
+        
+    }
+    
+    public int diasFaltan(String f_futura){
+        int dias=0;
+        Date f = new Date();
+        f = java.sql.Date.valueOf(f_futura);
+          int mes= f.getMonth()+1-this.getMes();
+         
+         
+         dias = 30-this.dia;
+        return dias+mes*30;
+    }
     public void mostrar(){
         System.out.println("Año "+this.año );
          System.out.println("Mes "+this.mes );
         System.out.println("Dia "+this.dia );
+        
     }
     
     public fecha(int dia, int mes, int año) {
