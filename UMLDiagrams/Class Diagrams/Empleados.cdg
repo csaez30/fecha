@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Empleados">
+  <ClassDiagramComponents>
+    <Class name="Departamento" package="" visibility="public" xPosition="232.0" yPosition="36.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="empleados" type="List&lt;Empleado&gt;" visibility="private"/>
+        <Field name="presupuesto" type="Strimg" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Empleado" package="" visibility="public" xPosition="626.0" yPosition="27.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="salario" type="souble" visibility="private"/>
+        <Field name="proyecto" type="Lisr&lt;Horario&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Proyecto " package="" visibility="public" xPosition="232.0" yPosition="244.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="descripcion" type="String" visibility="private"/>
+        <Field name="empleados" type="List&lt;Empleado&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Horario" package="" visibility="public" xPosition="626.0" yPosition="257.0">
+      <Fields>
+        <Field name="dia" type="Date" visibility="private"/>
+        <Field name="horaIn" type="Time" visibility="private"/>
+        <Field name="horaOut" type="Time" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="Empleado" target="Horario" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="tiene" source="Departamento" target="Empleado" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="tiene" source="Proyecto " target="Empleado" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

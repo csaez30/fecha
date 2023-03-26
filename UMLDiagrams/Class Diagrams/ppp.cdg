@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ppp">
+  <ClassDiagramComponents>
+    <Class name="Mueble" package="" visibility="public" xPosition="425.0" yPosition="54.0">
+      <Fields>
+        <Field name="madera" type="String" visibility="private"/>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="precio" type="double" visibility="private"/>
+        <Field name="stock" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularPrecio" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Placard" package="" visibility="public" xPosition="78.0" yPosition="457.0">
+      <Fields>
+        <Field name="cantPuertas" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularPrecioPublico" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Escritorio" package="" visibility="public" xPosition="320.0" yPosition="457.0">
+      <Fields>
+        <Field name="cantCajones" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularPrecioPublico" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Catalogo" package="" visibility="public" xPosition="98.0" yPosition="78.0">
+      <Fields>
+        <Field name="muebles" type="ArrayList&lt;Mueble&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="agregarMueble" returnType="Mueble" visibility="public">
+          <Argument type="Mueble" name="m"/>
+        </Method>
+        <Method name="listarMuebles" returnType="ArrayList&lt;Mueble&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Mesa" package="" visibility="public" xPosition="563.0" yPosition="457.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularPrecioFinal" returnType="double" visibility="public"/>
+        <Method name="costoTraslado" returnType="double" visibility="public"/>
+        <Method name="calcularPrecioPublico" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Silla" package="" visibility="public" xPosition="803.0" yPosition="457.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularPrecioFinal" returnType="double" visibility="public"/>
+        <Method name="costoTaraslado" returnType="double" visibility="public"/>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+        <Method name="calcularPrecioPublico" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Trasladables" package="" visibility="public" xPosition="726.0" yPosition="78.0">
+      <Methods>
+        <Method name="calcularPrecioFinal" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Mesa" target="Mueble"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Silla" target="Trasladables"/>
+    <IsRelation name="is" source="Silla" target="Mueble"/>
+    <HasRelation name="posee" source="Catalogo" target="Mueble" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <IsRelation name="is" source="Escritorio" target="Mueble"/>
+    <IsRelation name="is" source="Placard" target="Mueble"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Mesa" target="Trasladables"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

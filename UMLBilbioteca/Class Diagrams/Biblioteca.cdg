@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Biblioteca">
+  <ClassDiagramComponents>
+    <Class name="Libro" package="" visibility="public" xPosition="181.0" yPosition="31.0">
+      <Fields>
+        <Field name="isbn" type="int" visibility="private"/>
+        <Field name="titulo" type="String" visibility="private"/>
+        <Field name="autor" type="Autor" visibility="private"/>
+        <Field name="anio" type="int" visibility="private"/>
+        <Field name="tipo" type="String" visibility="private"/>
+        <Field name="Editorial" type="String" visibility="private"/>
+        <Field name="estado" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Ejemplar" package="" visibility="public" xPosition="472.0" yPosition="59.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="libro" type="Libro" visibility="private"/>
+        <Field name="estado" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Prestamo" package="" visibility="public" xPosition="773.0" yPosition="105.0">
+      <Fields>
+        <Field name="fechaInicio" type="Date" visibility="private"/>
+        <Field name="FechaFin" type="Date" visibility="private"/>
+        <Field name="ejemplar" type="Ejemplar" visibility="private"/>
+        <Field name="lector" type="Lector" visibility="private"/>
+        <Field name="multa" type="Multa" visibility="private"/>
+        <Field name="estado" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="solicitarLibro" returnType="void" visibility="public">
+          <Argument type="Ejemplar" name="e"/>
+          <Argument type="Lector" name="l"/>
+        </Method>
+        <Method name="devolverLibro" returnType="void" visibility="public">
+          <Argument type="Ejemplar" name="e"/>
+          <Argument type="Lector" name="l"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Autor" package="" visibility="public" xPosition="181.0" yPosition="288.0">
+      <Fields>
+        <Field name="dni" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="nacionalidad" type="String" visibility="private"/>
+        <Field name="fechaNac" type="Date" visibility="private"/>
+        <Field name="estado" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Lector" package="" visibility="public" xPosition="411.0" yPosition="288.0">
+      <Fields>
+        <Field name="nroSocio" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="domicilio" type="Object" visibility="private"/>
+        <Field name="mail" type="String" visibility="private"/>
+        <Field name="estado" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="activarLectior" returnType="void" visibility="public">
+          <Argument type="Lector" name="ll"/>
+        </Method>
+        <Method name="desactivarLector" returnType="void" visibility="public">
+          <Argument type="Lector" name="l"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Multa" package="" visibility="public" xPosition="817.0" yPosition="425.0">
+      <Fields>
+        <Field name="fecha_inicio" type="Date" visibility="private"/>
+        <Field name="fecha_fin" type="Date" visibility="private"/>
+        <Field name="idMulta" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="Prestamo" target="Multa" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="tiene" source="Libro" target="Ejemplar" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="escribe" source="Autor" target="Libro" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="pide" source="Lector" target="Prestamo" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="es_prestado" source="Ejemplar" target="Prestamo" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

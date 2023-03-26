@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="carrerapandemia">
+  <ClassDiagramComponents>
+    <Class name="Auto" package="carrerapandemia" visibility="public" xPosition="81.0" yPosition="174.0">
+      <Fields>
+        <Field name="patente" type="String" visibility="private"/>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="combustible" type="double" visibility="private"/>
+        <Field name="ruedas" type="List" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="patente"/>
+          <Argument type="String" name="color"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRuedas" returnType="List" visibility="public"/>
+        <Method name="setRuedas" returnType="void" visibility="public">
+          <Argument type="List" name="ruedas"/>
+        </Method>
+        <Method name="getPatente" returnType="String" visibility="public"/>
+        <Method name="setPatente" returnType="void" visibility="public">
+          <Argument type="String" name="patente"/>
+        </Method>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="avanzar" returnType="void" visibility="public">
+          <Argument type="double" name="metros"/>
+        </Method>
+        <Method name="retroceder" returnType="void" visibility="public">
+          <Argument type="double" name="metros"/>
+        </Method>
+        <Method name="llenarTanque" returnType="void" visibility="public"/>
+        <Method name="colocarRueda" returnType="void" visibility="public">
+          <Argument type="Rueda" name="rueda"/>
+        </Method>
+        <Method name="quitarRueda" returnType="void" visibility="public">
+          <Argument type="Rueda" name="rueda"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Camion" package="carrerapandemia" visibility="public" xPosition="684.0" yPosition="231.0">
+      <Fields>
+        <Field name="patente" type="String" visibility="private"/>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="combustible" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getPatente" returnType="String" visibility="public"/>
+        <Method name="setPatente" returnType="void" visibility="public">
+          <Argument type="String" name="patente"/>
+        </Method>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="avanzar" returnType="void" visibility="public">
+          <Argument type="double" name="metros"/>
+        </Method>
+        <Method name="retroceder" returnType="void" visibility="public">
+          <Argument type="double" name="metros"/>
+        </Method>
+        <Method name="llenarTanque" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CarreraPandemia" package="carrerapandemia" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Rueda" package="carrerapandemia" visibility="public" xPosition="399.0" yPosition="364.0">
+      <Fields>
+        <Field name="marca" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="marca"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMarca" returnType="String" visibility="public"/>
+        <Method name="setMarca" returnType="void" visibility="public">
+          <Argument type="String" name="marca"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Vehiculo" package="carrerapandemia" visibility="public" xPosition="391.0" yPosition="35.0">
+      <Methods>
+        <Method name="avanzar" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="double" name="metros"/>
+        </Method>
+        <Method name="retroceder" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="double" name="metros"/>
+        </Method>
+        <Method name="llenarTanque" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="carrerapandemia.Camion" target="carrerapandemia.Vehiculo"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="carrerapandemia.Auto" target="carrerapandemia.Vehiculo"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

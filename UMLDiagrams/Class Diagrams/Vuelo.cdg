@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Vuelo">
+  <ClassDiagramComponents>
+    <Class name="Vuelo" package="" visibility="public" xPosition="193.0" yPosition="92.0">
+      <Fields>
+        <Field name="nroVuelo" type="int" visibility="private"/>
+        <Field name="aerolines" type="String" visibility="private"/>
+        <Field name="horaIn" type="DateTime" visibility="private"/>
+        <Field name="horaOut" type="DateTime" visibility="private"/>
+        <Field name="origen" type="String" visibility="private"/>
+        <Field name="destino" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Cliente" package="" visibility="public" xPosition="530.0" yPosition="73.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="direccion" type="String" visibility="private"/>
+        <Field name="correo" type="String" visibility="private"/>
+        <Field name="dni" type="int" visibility="private"/>
+        <Field name="reservas" type="List&lt;Reserva&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Asiento" package="" visibility="public" xPosition="213.0" yPosition="345.0">
+      <Fields>
+        <Field name="nro" type="int" visibility="private"/>
+        <Field name="clase" type="String" visibility="private"/>
+        <Field name="precio" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Reserva" package="" visibility="public" xPosition="535.0" yPosition="312.0">
+      <Fields>
+        <Field name="nro" type="int" visibility="private"/>
+        <Field name="fecha" type="Date" visibility="private"/>
+        <Field name="estado" type="String" visibility="private"/>
+        <Field name="asientos" type="List&lt;Asiento&gt;" visibility="private"/>
+        <Field name="vuelo" type="Vuelo" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="Reserva" target="Asiento" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="tiene" source="Cliente" target="Reserva" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="tiene" source="Reserva" target="Vuelo" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

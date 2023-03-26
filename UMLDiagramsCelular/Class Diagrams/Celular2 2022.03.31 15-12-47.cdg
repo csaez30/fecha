@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Celular2">
+  <ClassDiagramComponents>
+    <Class name="Celular2" package="celular2" visibility="public" xPosition="0.0" yPosition="482.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Chip" package="celular2" visibility="public" xPosition="758.0" yPosition="84.0">
+      <Fields>
+        <Field name="empresa" type="String" visibility="private"/>
+        <Field name="numero" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="empresa"/>
+          <Argument type="int" name="nro"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="celular2" visibility="public" xPosition="23.0" yPosition="46.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="package"/>
+        <Field name="dni" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="dni"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getDni" returnType="int" visibility="public"/>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="int" name="dni"/>
+        </Method>
+        <Method name="usarCelular" returnType="void" visibility="package">
+          <Argument type="Celular" name="cel"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Celular" package="celular2" visibility="public" xPosition="330.0" yPosition="46.0">
+      <Fields>
+        <Field name="modelo" type="String" visibility="private"/>
+        <Field name="nroChip" type="int" visibility="private"/>
+        <Field name="chips" type="Chip[]" visibility="private"/>
+        <Field name="bateria" type="Bateria" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="modelo"/>
+          <Argument type="String" name="marca"/>
+          <Argument type="duble" name="Potencio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="mostrarChips" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="agregarChip" returnType="Chip" visibility="public">
+          <Argument type="Chip" name="nuevoChip"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Bateria" package="" visibility="public" xPosition="335.0" yPosition="369.0">
+      <Fields>
+        <Field name="marca" type="String" visibility="private"/>
+        <Field name="potencia" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="marca"/>
+          <Argument type="double" name="portencia"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="celular2.Celular" target="celular2.Chip" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="incluye" source="celular2.Celular" target="Bateria" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation source="celular2.Persona" target="celular2.Celular" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

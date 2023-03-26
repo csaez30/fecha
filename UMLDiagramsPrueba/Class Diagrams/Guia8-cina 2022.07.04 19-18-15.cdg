@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Guia8-cina">
+  <ClassDiagramComponents>
+    <Class name="Asiento" package="guia8.cina" visibility="public" xPosition="167.0" yPosition="-2.0">
+      <Fields>
+        <Field name="letra" type="char" visibility="private"/>
+        <Field name="numero" type="int" visibility="private"/>
+        <Field name="espectador" type="Espectador" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="char" name="letra"/>
+          <Argument type="int" name="numero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getLetra" returnType="char" visibility="public"/>
+        <Method name="setLetra" returnType="void" visibility="public">
+          <Argument type="char" name="letra"/>
+        </Method>
+        <Method name="getNumero" returnType="int" visibility="public"/>
+        <Method name="setNumero" returnType="void" visibility="public">
+          <Argument type="int" name="numero"/>
+        </Method>
+        <Method name="getEspectador" returnType="Espectador" visibility="public"/>
+        <Method name="setEspectador" returnType="void" visibility="public">
+          <Argument type="Espectador" name="espectador"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Cine" package="guia8.cina" visibility="public" xPosition="153.0" yPosition="324.0">
+      <Fields>
+        <Field name="asientos" type="Asiento[][]" visibility="private"/>
+        <Field name="pelicula" type="Pelicula" visibility="private"/>
+        <Field name="precio" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="fila"/>
+          <Argument type="int" name="columna"/>
+          <Argument type="Pelicula" name="pelicula"/>
+          <Argument type="double" name="precio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="llenarAsientos" returnType="void" visibility="public"/>
+        <Method name="asientoLibre" returnType="boolean" visibility="public">
+          <Argument type="int" name="fila"/>
+          <Argument type="int" name="columna"/>
+        </Method>
+        <Method name="tieneEdad" returnType="boolean" visibility="public">
+          <Argument type="Espectador" name="e"/>
+        </Method>
+        <Method name="tieneDinero" returnType="boolean" visibility="public">
+          <Argument type="Espectador" name="e"/>
+        </Method>
+        <Method name="hayLibres" returnType="boolean" visibility="public"/>
+        <Method name="getAsientos" returnType="Asiento[][]" visibility="public"/>
+        <Method name="setAsientos" returnType="void" visibility="public">
+          <Argument type="Asiento[][]" name="asientos"/>
+        </Method>
+        <Method name="getPelicula" returnType="Pelicula" visibility="public"/>
+        <Method name="setPelicula" returnType="void" visibility="public">
+          <Argument type="Pelicula" name="pelicula"/>
+        </Method>
+        <Method name="getPrecio" returnType="double" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="mostrarSala" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Espectador" package="guia8.cina" visibility="public" xPosition="547.0" yPosition="61.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="dinero" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="double" name="dinero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="getDinero" returnType="double" visibility="public"/>
+        <Method name="setDinero" returnType="void" visibility="public">
+          <Argument type="double" name="dinero"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Guia8Cina" package="guia8.cina" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Pelicula" package="guia8.cina" visibility="public" xPosition="332.0" yPosition="230.0">
+      <Fields>
+        <Field name="titulo" type="String" visibility="private"/>
+        <Field name="duracion" type="double" visibility="private"/>
+        <Field name="edadMinima" type="int" visibility="private"/>
+        <Field name="Director" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="double" name="duracion"/>
+          <Argument type="int" name="edadMinima"/>
+          <Argument type="String" name="Director"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTitulo" returnType="String" visibility="public"/>
+        <Method name="setTitulo" returnType="void" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="getDuracion" returnType="double" visibility="public"/>
+        <Method name="setDuracion" returnType="void" visibility="public">
+          <Argument type="double" name="duracion"/>
+        </Method>
+        <Method name="getEdadMinima" returnType="int" visibility="public"/>
+        <Method name="setEdadMinima" returnType="void" visibility="public">
+          <Argument type="int" name="edadMinima"/>
+        </Method>
+        <Method name="getDirector" returnType="String" visibility="public"/>
+        <Method name="setDirector" returnType="void" visibility="public">
+          <Argument type="String" name="Director"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="sienta" source="guia8.cina.Asiento" target="guia8.cina.Espectador" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="proyecta" source="guia8.cina.Cine" target="guia8.cina.Pelicula" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="tiene" source="guia8.cina.Cine" target="guia8.cina.Asiento" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

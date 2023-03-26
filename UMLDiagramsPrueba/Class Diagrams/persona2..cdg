@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="persona2.">
+  <ClassDiagramComponents>
+    <Class name="Persona" package="" visibility="public" isAbstract="true" xPosition="383.0" yPosition="47.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="dni" type="int" visibility="private"/>
+        <Field name="celular" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nom"/>
+          <Argument type="int" name="dni"/>
+          <Argument type="int" name="cel"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="caminar" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="comer" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Alumno" package="" visibility="public" xPosition="364.0" yPosition="334.0">
+      <Fields>
+        <Field name="curso" type="String" visibility="private"/>
+        <Field name="anio" type="int" visibility="private"/>
+        <Field name="carrero" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="caminar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Profesor" package="" visibility="public" xPosition="611.0" yPosition="334.0">
+      <Fields>
+        <Field name="responsable" type="String" visibility="private"/>
+        <Field name="carrera" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="caminar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Deportista" package="" visibility="public" xPosition="46.0" yPosition="275.0">
+      <Fields>
+        <Field name="diciplina" type="String" visibility="private"/>
+        <Field name="resistencia" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="caminar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Profesor" target="Persona"/>
+    <IsRelation name="is" source="Alumno" target="Persona"/>
+    <IsRelation name="is" source="Deportista" target="Persona"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

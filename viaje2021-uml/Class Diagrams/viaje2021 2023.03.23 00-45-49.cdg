@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="viaje2021">
+  <ClassDiagramComponents>
+    <Class name="Auto" package="viaje2021" visibility="public" xPosition="377.0" yPosition="417.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="marca"/>
+          <Argument type="String" name="patente"/>
+          <Argument type="Combustible" name="combustible"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="costoCombustible" returnType="double" visibility="public">
+          <Argument type="double" name="km"/>
+          <Argument type="Combustible" name="combust"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Camion" package="viaje2021" visibility="public" xPosition="358.0" yPosition="442.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="marca"/>
+          <Argument type="String" name="patente"/>
+          <Argument type="Combustible" name="combustible"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="costoCombustible" returnType="double" visibility="public">
+          <Argument type="double" name="km"/>
+          <Argument type="Combustible" name="combust"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Camioneta" package="viaje2021" visibility="public" xPosition="757.0" yPosition="428.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="marca"/>
+          <Argument type="String" name="patente"/>
+          <Argument type="Combustible" name="combustible"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="costoCombustible" returnType="double" visibility="public">
+          <Argument type="double" name="km"/>
+          <Argument type="Combustible" name="combust"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ciudad" package="viaje2021" visibility="public" xPosition="-82.0" yPosition="114.0">
+      <Fields>
+        <Field name="km" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="nroRuta" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="km"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="nroRuta"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getKm" returnType="int" visibility="public"/>
+        <Method name="setKm" returnType="void" visibility="public">
+          <Argument type="int" name="km"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getNroRuta" returnType="int" visibility="public"/>
+        <Method name="setNroRuta" returnType="void" visibility="public">
+          <Argument type="int" name="nroRuta"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Combustible" package="viaje2021" visibility="public" xPosition="792.0" yPosition="71.0">
+      <Fields>
+        <Field name="tipoCombust" type="String" visibility="private"/>
+        <Field name="precio" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="tipoCombust"/>
+          <Argument type="double" name="precio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTipoCombust" returnType="String" visibility="public"/>
+        <Method name="setTipoCombust" returnType="void" visibility="public">
+          <Argument type="String" name="tipoCombust"/>
+        </Method>
+        <Method name="getPrecio" returnType="double" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="double" name="precio"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vehiculo" package="viaje2021" visibility="public" isAbstract="true" xPosition="325.0" yPosition="68.0">
+      <Fields>
+        <Field name="marca" type="String" visibility="protected"/>
+        <Field name="patente" type="String" visibility="protected"/>
+        <Field name="combustible" type="Combustible" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="marca"/>
+          <Argument type="String" name="patente"/>
+          <Argument type="Combustible" name="combustible"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMarca" returnType="String" visibility="public"/>
+        <Method name="setMarca" returnType="void" visibility="public">
+          <Argument type="String" name="marca"/>
+        </Method>
+        <Method name="getPatente" returnType="String" visibility="public"/>
+        <Method name="setPatente" returnType="void" visibility="public">
+          <Argument type="String" name="patente"/>
+        </Method>
+        <Method name="getCombustible" returnType="Combustible" visibility="public"/>
+        <Method name="setCombustible" returnType="void" visibility="public">
+          <Argument type="Combustible" name="combustible"/>
+        </Method>
+        <Method name="costoCombustible" returnType="double" visibility="public" isAbstract="true">
+          <Argument type="double" name="km"/>
+          <Argument type="Combustible" name="combust"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="viaje" package="viaje2021" visibility="public" xPosition="-65.0" yPosition="22.0">
+      <Fields>
+        <Field name="origen" type="Ciudad" visibility="private"/>
+        <Field name="destino" type="Ciudad" visibility="private"/>
+        <Field name="distancia" type="double" visibility="private"/>
+        <Field name="vehiculo" type="Vehiculo" visibility="private"/>
+        <Field name="cantPeaje" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Ciudad" name="origen"/>
+          <Argument type="Ciudad" name="destino"/>
+          <Argument type="double" name="distancia"/>
+          <Argument type="Vehiculo" name="vehiculo"/>
+          <Argument type="int" name="cantPeaje"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Ciudad" name="origen"/>
+          <Argument type="Ciudad" name="destino"/>
+          <Argument type="Vehiculo" name="vehiculo"/>
+          <Argument type="int" name="cantPeaje"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getOrigen" returnType="Ciudad" visibility="public"/>
+        <Method name="setOrigen" returnType="void" visibility="public">
+          <Argument type="Ciudad" name="origen"/>
+        </Method>
+        <Method name="getDestino" returnType="Ciudad" visibility="public"/>
+        <Method name="setDestino" returnType="void" visibility="public">
+          <Argument type="Ciudad" name="destino"/>
+        </Method>
+        <Method name="getDistancia" returnType="double" visibility="public"/>
+        <Method name="setDistancia" returnType="void" visibility="public">
+          <Argument type="double" name="distancia"/>
+        </Method>
+        <Method name="getVehiculo" returnType="Vehiculo" visibility="public"/>
+        <Method name="setVehiculo" returnType="void" visibility="public">
+          <Argument type="Vehiculo" name="vehiculo"/>
+        </Method>
+        <Method name="getCantPeaje" returnType="int" visibility="public"/>
+        <Method name="setCantPeaje" returnType="void" visibility="public">
+          <Argument type="int" name="cantPeaje"/>
+        </Method>
+        <Method name="calcularDistancia" returnType="double" visibility="public"/>
+        <Method name="calcularCostoPeajes" returnType="double" visibility="public"/>
+        <Method name="costoTotal" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="vehiculo" source="viaje2021.viaje" target="viaje2021.Vehiculo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="origen" source="viaje2021.viaje" target="viaje2021.Ciudad" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="viaje2021.Auto" target="viaje2021.Vehiculo"/>
+    <IsRelation name="is" source="viaje2021.Camion" target="viaje2021.Vehiculo"/>
+    <IsRelation name="is" source="viaje2021.Camioneta" target="viaje2021.Vehiculo"/>
+    <HasRelation name="destino" source="viaje2021.viaje" target="viaje2021.Ciudad" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="combustible" source="viaje2021.Vehiculo" target="viaje2021.Combustible" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

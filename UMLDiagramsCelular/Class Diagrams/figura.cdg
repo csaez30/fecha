@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="figura">
+  <ClassDiagramComponents>
+    <Interface name="Figura" package="" visibility="public" xPosition="368.0" yPosition="76.0">
+      <Methods>
+        <Method name="calcularPerimetro" returnType="double" visibility="public"/>
+        <Method name="calcularArea" returnType="double" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Cuadrado" package="" visibility="public" xPosition="285.0" yPosition="306.0">
+      <Fields>
+        <Field name="lado" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularPerimetro" returnType="double" visibility="public"/>
+        <Method name="calcularArea" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Triangulo" package="" visibility="public" xPosition="517.0" yPosition="306.0">
+      <Fields>
+        <Field name="base" type="int" visibility="private"/>
+        <Field name="Altura" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularArea" returnType="double" visibility="public"/>
+        <Method name="calcularPerimetro" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Triangulo" target="Figura"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Cuadrado" target="Figura"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

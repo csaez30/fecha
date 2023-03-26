@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Prueba">
+  <ClassDiagramComponents>
+    <Class name="Persona" package="" visibility="public" xPosition="98.0" yPosition="110.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="DNI" type="Int" visibility="private"/>
+        <Field name="Domicilio" type="String" visibility="private"/>
+        <Field name="auto" type="Auto" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Auto" package="" visibility="public" xPosition="450.0" yPosition="148.0">
+      <Fields>
+        <Field name="patente" type="String" visibility="private"/>
+        <Field name="color" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Equipo" package="" visibility="public" xPosition="160.0" yPosition="348.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="jugadores" type="List&lt;Jugador&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="aggregarJugador" returnType="void" visibility="public">
+          <Argument type="Jugador" name="j"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Jugador" package="" visibility="public" xPosition="532.0" yPosition="358.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="posicion" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="Persona" target="Auto" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="esta compuesto por" source="Equipo" target="Jugador" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

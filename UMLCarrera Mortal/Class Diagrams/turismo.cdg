@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="turismo">
+  <ClassDiagramComponents>
+    <Class name="Cliente" package="" visibility="public" xPosition="100.0" yPosition="154.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="dni" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Detino" package="" visibility="public" xPosition="358.0" yPosition="125.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="Fecha" type="Date" visibility="private"/>
+        <Field name="Temporada" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Paquete" package="" visibility="public" xPosition="602.0" yPosition="169.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Transporte" package="" visibility="public" xPosition="921.0" yPosition="53.0">
+      <Fields>
+        <Field name="tipo_Trasporte" type="String" visibility="private"/>
+        <Field name="idaYvuelta" type="String" visibility="private"/>
+        <Field name="Precio" type="double" visibility="private"/>
+        <Field name="untitledField" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Estadia" package="" visibility="public" xPosition="921.0" yPosition="222.0">
+      <Fields>
+        <Field name="Nombre" type="String" visibility="private"/>
+        <Field name="Ubicacion" type="String" visibility="private"/>
+        <Field name="categoria" type="String" visibility="private"/>
+        <Field name="precio" type="double" visibility="private"/>
+        <Field name="tipoAlojamineto" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Menu" package="" visibility="public" xPosition="921.0" yPosition="400.0">
+      <Fields>
+        <Field name="tipo_menu" type="String" visibility="private"/>
+        <Field name="precio" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Presupuesto" package="" visibility="public" xPosition="602.0" yPosition="359.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="esta_incluido" source="Estadia" target="Paquete" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="genera" source="Paquete" target="Presupuesto" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="ofrece" source="Detino" target="Paquete" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="selecciona" source="Cliente" target="Detino" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="incluye" source="Transporte" target="Paquete" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="esta_incluido" source="Menu" target="Paquete" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

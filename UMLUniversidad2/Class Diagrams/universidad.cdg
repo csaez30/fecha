@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="universidad">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="" visibility="public" xPosition="155.0" yPosition="85.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="legajo" type="int" visibility="private"/>
+        <Field name="activo" type="boolean" visibility="private"/>
+        <Field name="fechNac" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Materia" package="" visibility="public" xPosition="752.0" yPosition="111.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="anio" type="int" visibility="private"/>
+        <Field name="activo" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Incripcion" package="" visibility="public" xPosition="445.0" yPosition="282.0">
+      <Fields>
+        <Field name="idInsc" type="int" visibility="private"/>
+        <Field name="alumno" type="Alumno" visibility="private"/>
+        <Field name="materia" type="Materia" visibility="private"/>
+        <Field name="nota" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="se_inscribe" source="Alumno" target="Incripcion" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="es_cursada" source="Materia" target="Incripcion" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

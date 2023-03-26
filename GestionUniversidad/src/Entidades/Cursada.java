@@ -7,10 +7,6 @@ package Entidades;
 
 import java.util.Date;
 
-/**
- *
- * @author alejo
- */
 public class Cursada {
     private int id = -1;
     private Date fechaIinicio = new Date();

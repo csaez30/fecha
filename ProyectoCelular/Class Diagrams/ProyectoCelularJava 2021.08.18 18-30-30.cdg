@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ProyectoCelularJava">
+  <ClassDiagramComponents>
+    <Class name="Bateria" package="" visibility="public" xPosition="29.0" yPosition="245.0">
+      <Fields>
+        <Field name="marca" type="String" visibility="private"/>
+        <Field name="potencia" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="marcaBateria"/>
+          <Argument type="int" name="potencia"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMarca" returnType="String" visibility="public"/>
+        <Method name="setMarca" returnType="String" visibility="public">
+          <Argument type="String" name="marca"/>
+        </Method>
+        <Method name="getPotencia" returnType="int" visibility="public"/>
+        <Method name="setPotencia" returnType="int" visibility="public">
+          <Argument type="int" name="potencia"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="mostrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Chip" package="" visibility="public" xPosition="584.0" yPosition="11.0">
+      <Fields>
+        <Field name="empresa" type="String" visibility="private"/>
+        <Field name="numero" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="empresa"/>
+          <Argument type="int" name="numero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="mostrar" returnType="void" visibility="public"/>
+        <Method name="getEmpresa" returnType="String" visibility="public"/>
+        <Method name="setEmpresa" returnType="String" visibility="public">
+          <Argument type="String" name="empresa"/>
+        </Method>
+        <Method name="getNumero" returnType="int" visibility="public"/>
+        <Method name="setNumero" returnType="int" visibility="public">
+          <Argument type="int" name="numero"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ProyectoCelularJava" package="" visibility="public" xPosition="863.0" yPosition="31.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SmartPhone" package="" visibility="public" xPosition="474.0" yPosition="316.0">
+      <Fields>
+        <Field name="modelo" type="String" visibility="private"/>
+        <Field name="nroChip" type="int" visibility="private"/>
+        <Field name="bateria" type="Bateria" visibility="private"/>
+        <Field name="chips" type="Chip[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="modelo"/>
+          <Argument type="String" name="marcaBateria"/>
+          <Argument type="int" name="potencia"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="mostrar" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="agregarChip" returnType="Chip" visibility="public">
+          <Argument type="Chip" name="nuevoChip"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="" visibility="public" xPosition="122.0" yPosition="31.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="dni" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="usar" returnType="void" visibility="public">
+          <Argument type="SmastPhone" name="sp"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="SmartPhone" target="Bateria" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="tiene" source="SmartPhone" target="Chip" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="usa" source="Persona" target="SmartPhone" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

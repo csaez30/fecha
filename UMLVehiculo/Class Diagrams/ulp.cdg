@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ulp">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="" visibility="public" xPosition="160.0" yPosition="131.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Materia" package="" visibility="public" xPosition="666.0" yPosition="95.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="cursa" package="" visibility="public" xPosition="398.0" yPosition="297.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Alumno" target="cursa"/>
+    <IsRelation name="is" source="Materia" target="cursa"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

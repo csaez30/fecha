@@ -5,10 +5,7 @@
  */
 package Entidades;
 
-/**
- *
- * @author alejo
- */
+
 public class Materia {
 
     private int id = -1;

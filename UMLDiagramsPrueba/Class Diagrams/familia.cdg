@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="familia">
+  <ClassDiagramComponents>
+    <Class name="Padre" package="" visibility="public" xPosition="283.0" yPosition="55.0">
+      <Fields>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="casa" type="Casa" visibility="private"/>
+        <Field name="auto" type="Auto" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setApellido" returnType="String" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setCasa" returnType="Casa" visibility="public">
+          <Argument type="Casa" name="casa"/>
+        </Method>
+        <Method name="getCasa" returnType="Casa" visibility="public"/>
+        <Method name="setAuto" returnType="auto" visibility="public">
+          <Argument type="auto" name="auto"/>
+        </Method>
+        <Method name="getAuto" returnType="Auto" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Hijo" package="" visibility="public" xPosition="398.0" yPosition="370.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="dinero" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="darDinero" returnType="void" visibility="public">
+          <Argument type="double" name="pesos"/>
+        </Method>
+        <Method name="bailar" returnType="void" visibility="public"/>
+        <Method name="cantar" returnType="void" visibility="public"/>
+        <Method name="jugarFutbol" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Madre" package="" visibility="public" xPosition="525.0" yPosition="79.0">
+      <Methods>
+        <Method name="cantar" returnType="void" visibility="public"/>
+        <Method name="bailar" returnType="void" visibility="public"/>
+        <Method name="darDinero" returnType="double" visibility="public">
+          <Argument type="double" name="pesos"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="Hermano" package="" visibility="public" xPosition="768.0" yPosition="79.0">
+      <Methods>
+        <Method name="jugarFutbol" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Casa" package="" visibility="public" xPosition="61.0" yPosition="55.0">
+      <Fields>
+        <Field name="zona" type="String" visibility="private"/>
+        <Field name="cantAmbiente" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setZona" returnType="String" visibility="public">
+          <Argument type="String" name="z"/>
+        </Method>
+        <Method name="getZona" returnType="String" visibility="public"/>
+        <Method name="setCatAmbiente" returnType="void" visibility="public"/>
+        <Method name="getCantAmbiente" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Auto" package="" visibility="public" xPosition="40.0" yPosition="293.0">
+      <Fields>
+        <Field name="patente" type="String" visibility="private"/>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="combustible" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="avanzar" returnType="double" visibility="public">
+          <Argument type="double" name="metros"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Hijo" target="Hermano"/>
+    <HasRelation name="tiene" source="Padre" target="Auto" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Hijo" target="Padre"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Hijo" target="Madre"/>
+    <HasRelation name="tiene" source="Padre" target="Casa" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

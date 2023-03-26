@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="torneo de tenis">
+  <ClassDiagramComponents>
+    <Class name="Jugador" package="" visibility="public" xPosition="77.0" yPosition="55.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Registro" package="" visibility="public" xPosition="408.0" yPosition="55.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Torneo" package="" visibility="public" xPosition="717.0" yPosition="58.0">
+      <Fields>
+        <Field name="categoria" type="String" visibility="private"/>
+        <Field name="duracion" type="int" visibility="private"/>
+        <Field name="fechaInicio" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Encuentro" package="" visibility="public" xPosition="717.0" yPosition="238.0">
+      <Fields>
+        <Field name="fechahota" type="DateTime" visibility="private"/>
+        <Field name="jug1" type="Jugador" visibility="private"/>
+        <Field name="jug2" type="Jugador" visibility="private"/>
+        <Field name="ganador" type="Jugador" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Cancha" package="" visibility="public" xPosition="933.0" yPosition="276.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Sponsors" package="" visibility="public" xPosition="77.0" yPosition="225.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Puntaje" package="" visibility="public" xPosition="423.0" yPosition="223.0">
+      <Fields>
+        <Field name="jug" type="Jugador" visibility="private"/>
+        <Field name="encuentro" type="Encuentro" visibility="private"/>
+        <Field name="puntaje" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="Cancha" target="Encuentro" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="tiene" source="Torneo" target="Registro" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="inscribe" source="Registro" target="Jugador" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="se_obtiene" source="Puntaje" target="Encuentro" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="tiene" source="Jugador" target="Puntaje" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="tien" source="Torneo" target="Encuentro" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="tiene" source="Jugador" target="Sponsors" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

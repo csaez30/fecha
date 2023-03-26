@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="herenciaPersona">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="" visibility="public" isAbstract="true" xPosition="27.0" yPosition="69.0">
+      <Fields>
+        <Field name="curso" type="String" visibility="private"/>
+        <Field name="anio" type="int" visibility="private"/>
+        <Field name="carrero" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="curso"/>
+          <Argument type="int" name="anio"/>
+          <Argument type="String" name="carrero"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="dni"/>
+          <Argument type="int" name="celular"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCurso" returnType="String" visibility="public"/>
+        <Method name="setCurso" returnType="void" visibility="public">
+          <Argument type="String" name="curso"/>
+        </Method>
+        <Method name="getAnio" returnType="int" visibility="public"/>
+        <Method name="setAnio" returnType="void" visibility="public">
+          <Argument type="int" name="anio"/>
+        </Method>
+        <Method name="getCarrero" returnType="String" visibility="public"/>
+        <Method name="setCarrero" returnType="void" visibility="public">
+          <Argument type="String" name="carrero"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Deportista" package="" visibility="public" xPosition="57.0" yPosition="410.0">
+      <Fields>
+        <Field name="diciplina" type="String" visibility="private"/>
+        <Field name="resistencia" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="diciplina"/>
+          <Argument type="double" name="resistencia"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="dni"/>
+          <Argument type="int" name="celular"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="caminar" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="HerenciaPersona" package="" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="" visibility="public" isAbstract="true" xPosition="558.0" yPosition="64.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="protected"/>
+        <Field name="dni" type="int" visibility="protected"/>
+        <Field name="celular" type="int" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="dni"/>
+          <Argument type="int" name="celular"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getDni" returnType="int" visibility="public"/>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="int" name="dni"/>
+        </Method>
+        <Method name="getCelular" returnType="int" visibility="public"/>
+        <Method name="setCelular" returnType="void" visibility="public">
+          <Argument type="int" name="celular"/>
+        </Method>
+        <Method name="caminar" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="comer" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Profesor" package="" visibility="public" xPosition="788.0" yPosition="-3.0">
+      <Fields>
+        <Field name="responsable" type="String" visibility="private"/>
+        <Field name="carrera" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="responsable"/>
+          <Argument type="String" name="carrera"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="dni"/>
+          <Argument type="int" name="celular"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="caminar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Deportista" target="Persona"/>
+    <IsRelation name="is" source="Alumno" target="Persona"/>
+    <IsRelation name="is" source="Profesor" target="Persona"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Colecciones">
+  <ClassDiagramComponents>
+    <Class name="Birome" package="" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="marca" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Estudiante" package="Curso" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="documento" type="Integer" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="nota1" type="Integer" visibility="private"/>
+        <Field name="nota2" type="Integer" visibility="private"/>
+        <Field name="compararDocumentosAscendente" type="Comparator&lt;Estudiante&gt;" visibility="public" isStatic="true"/>
+        <Field name="compararNombresAscendente" type="Comparator&lt;Estudiante&gt;" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getDocumento" returnType="Integer" visibility="public"/>
+        <Method name="setDocumento" returnType="void" visibility="public">
+          <Argument type="Integer" name="documento"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getNota1" returnType="Integer" visibility="public"/>
+        <Method name="setNota1" returnType="void" visibility="public">
+          <Argument type="Integer" name="nota1"/>
+        </Method>
+        <Method name="getNota2" returnType="Integer" visibility="public"/>
+        <Method name="setNota2" returnType="void" visibility="public">
+          <Argument type="Integer" name="nota2"/>
+        </Method>
+        <Method name="notaFinal" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Main" package="Curso" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Listas" package="Listas" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Maps" package="Mapas" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Tree" package="Mapas" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="dni" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="escribir" returnType="void" visibility="public">
+          <Argument type="Birome" name="b"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Sets" package="Sets" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SetTree" package="Sets" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Persona" target="Birome" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="compararDocumentosAscendente" source="Curso.Estudiante" target="Curso.Estudiante" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="compararNombresAscendente" source="Curso.Estudiante" target="Curso.Estudiante" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
