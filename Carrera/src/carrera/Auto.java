@@ -10,5 +10,8 @@ package carrera;
  * @author Admin
  */
 public class Auto {
+    String patente;
+    String marca;
+    String color;
     
 }
