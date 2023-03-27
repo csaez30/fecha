@@ -51,7 +51,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Ciudad" package="viaje2021" visibility="public" xPosition="-82.0" yPosition="114.0">
+    <Class name="Ciudad" package="viaje2021" visibility="public" xPosition="-98.0" yPosition="115.0">
       <Fields>
         <Field name="km" type="int" visibility="private"/>
         <Field name="nombre" type="String" visibility="private"/>
@@ -186,12 +186,12 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <HasRelation name="vehiculo" source="viaje2021.viaje" target="viaje2021.Vehiculo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="origen" source="viaje2021.viaje" target="viaje2021.Ciudad" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tiene" source="viaje2021.viaje" target="viaje2021.Vehiculo" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
     <IsRelation name="is" source="viaje2021.Auto" target="viaje2021.Vehiculo"/>
+    <HasRelation name="tiene" source="viaje2021.viaje" target="viaje2021.Ciudad" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
     <IsRelation name="is" source="viaje2021.Camion" target="viaje2021.Vehiculo"/>
     <IsRelation name="is" source="viaje2021.Camioneta" target="viaje2021.Vehiculo"/>
-    <HasRelation name="destino" source="viaje2021.viaje" target="viaje2021.Ciudad" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="destino" source="viaje2021.viaje" target="viaje2021.Ciudad" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
     <HasRelation name="combustible" source="viaje2021.Vehiculo" target="viaje2021.Combustible" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
