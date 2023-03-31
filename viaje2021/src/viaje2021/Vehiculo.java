@@ -44,7 +44,7 @@ public abstract class Vehiculo {
     public void setCombustible(Combustible combustible) {
         this.combustible = combustible;
     }
-    public abstract double costoCombustible(double km, Combustible combust);
+    public abstract double costoCombustible(double km);
 
     @Override
     public String toString() {

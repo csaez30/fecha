@@ -16,8 +16,8 @@ public class Viaje2021 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Combustible nafta=new Combustible("nafta",110);
-         Combustible gasoil=new Combustible("gasoil",90);
+        Combustible nafta=new Combustible("nafta",350);
+         Combustible gasoil=new Combustible("gasoil",300);
         Auto a1= new Auto("Fiat", "32dsds",nafta); 
         Camion c1 = new Camion("Scania","ddd2222",gasoil);
         Ciudad sanLuis= new Ciudad(1000,"San Luis",7);
@@ -26,8 +26,9 @@ public class Viaje2021 {
         viaje v1 = new viaje (sanLuis,mendoza,a1,3);
         viaje v2 = new viaje (sanLuis,bsAs,1100,c1,3);
         System.out.println("distncia "+v2.calcularDistancia());
+        System.out.println("tipo de combustible: "+v2.getVehiculo().getCombustible().getTipoCombust());
         System.out.println("precio "+v2.getVehiculo().getCombustible().getPrecio());
-        System.out.println("costo combustible "+v2.getVehiculo().costoCombustible(v2.calcularDistancia(), v2.getVehiculo().getCombustible()));
+        System.out.println("costo combustible "+v2.getVehiculo().costoCombustible(v2.calcularDistancia()));
 //        System.out.println(" Viaje de "+ v1.getOrigen() +" hasta"+v1.getDestino()+" en "+v1.getVehiculo().getClass()+
 //                " costo de combustible "+v1.getVehiculo().costoCombustible(v1.calcularDistancia(), v1.getVehiculo().getCombustible()));
 //        System.out.println(" Viaje de "+ v2.getOrigen() +" hasta"+v2.getDestino()+" en "+v2.getVehiculo().getClass()+

@@ -10,10 +10,10 @@ package viaje2021;
  * @author Admin
  */
 public class Camion extends Vehiculo{
-    public double costoCombustible(double km, Combustible combust){
+    public double costoCombustible(double km){
         
       
-               return 12*(km*0.1)*combust.getPrecio();  //litros* precio*km
+               return 12*(km*0.1)*combustible.getPrecio();  //litros* precio*km
            
              }     
 

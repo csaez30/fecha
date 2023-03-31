@@ -27,7 +27,7 @@ public class viaje {
     public viaje(Ciudad origen, Ciudad destino, Vehiculo vehiculo, int cantPeaje) {
         this.origen = origen;
         this.destino = destino;
-   
+         distancia= calcularDistancia();
         this.vehiculo = vehiculo;
         this.cantPeaje = cantPeaje;
     }
@@ -97,7 +97,7 @@ public class viaje {
       else precio=80;
       
     
-      return (vehiculo.costoCombustible(calcularDistancia(), vehiculo.getCombustible())+calcularCostoPeajes());
+      return (vehiculo.costoCombustible(calcularDistancia())+calcularCostoPeajes());
     
     }
     

@@ -15,10 +15,10 @@ public class Camioneta  extends Vehiculo{
         super(marca, patente, combustible);
     }
 
-    public double costoCombustible(double km, Combustible combust){
-      if  (combust.getTipoCombust().equals("nafta"))
-                        return 10*(km*0.1)*combust.getPrecio();  //litros* precio de la nafta
-             else  return 10*80; //litros *precio del gasoil
-             }     
-     
+    public double costoCombustible(double km){
+         return 10*(km*0.1)*combustible.getPrecio();  //litros* precio de la nafta
+            
+     }     
+
+   
 }

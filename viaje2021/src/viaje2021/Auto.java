@@ -17,11 +17,9 @@ public class Auto extends Vehiculo {
 
    
     
-    public double costoCombustible(double km, Combustible combust){
-      
-                        return (7*km/100)*combust.getPrecio();  //litros* precio de la nafta
-           
-             }     
+    public double costoCombustible(double km){
+                return (7*km/100)*combustible.getPrecio();  //litros* precio de la nafta
+            }     
 
     @Override
     public String toString() {
