@@ -31,7 +31,10 @@ public class Accesoabasededatos {
      * @param args the command line arguments
      */
     public static void main(String[] args)  {
-        Conexion conexion;
+       
+            Connection con = Conexion.getConexion();
+       
+        
  
         
             

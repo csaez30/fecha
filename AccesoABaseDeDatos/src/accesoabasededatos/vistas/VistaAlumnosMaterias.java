@@ -68,7 +68,7 @@ private ArrayList<Alumno> listaAlumnos;
  public void armaCabeceraTabla(){
     
         //Titulos de Columnas
-        ArrayList<Object> columnas=new ArrayList<Object>();
+        ArrayList<Object> columnas=new ArrayList<>();
         columnas.add("ID");
         columnas.add("Nombre");
         columnas.add("Nota");

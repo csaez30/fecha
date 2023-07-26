@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="figuras">
+  <ClassDiagramComponents>
+    <Class name="Figura" package="" visibility="public" isAbstract="true" xPosition="350.0" yPosition="140.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularArea" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="calcularPerimetro" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="Cuadrado" package="" visibility="public" xPosition="137.0" yPosition="399.0">
+      <Fields>
+        <Field name="lado" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="calcularArea" returnType="void" visibility="public"/>
+        <Method name="calcularPerimetro" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Triangulo" package="" visibility="public" xPosition="412.0" yPosition="399.0">
+      <Fields>
+        <Field name="base" type="int" visibility="private"/>
+        <Field name="altura" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="calcularArea" returnType="void" visibility="public"/>
+        <Method name="calcularPerimetro" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Circulo" package="" visibility="public" xPosition="603.0" yPosition="399.0">
+      <Fields>
+        <Field name="radio" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularArea" returnType="void" visibility="public"/>
+        <Method name="calcularPerimetro" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Circulo" target="Figura"/>
+    <IsRelation name="is" source="Cuadrado" target="Figura"/>
+    <IsRelation name="is" source="Triangulo" target="Figura"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -44,17 +44,17 @@ public class TestAgendaTelefonica {
         dir.agregarCliente(telefono, cliente6);
         
         
-        /*
+        
         int dni=30377673;
-        directorioSL.borrarCliente(dni);
+//        directorioSL.borrarCliente(dni);
 
         Map <Long, Cliente> aux=new HashMap<>();
-        aux=directorioSL.getDirectorio();
+        aux= dir.getDirectorio();
         System.out.println("Mostrando Agenda");
         for(Map.Entry<Long,Cliente> it: aux.entrySet()){
             System.out.println("Apellido: "+it.getValue().getApellido()+"  Telefono: "+it.getKey().toString());
         }
-        */
+        
         
     }
     

@@ -2,7 +2,7 @@
 
 <ClassDiagram name="viaje2021">
   <ClassDiagramComponents>
-    <Class name="Auto" package="viaje2021" visibility="public" xPosition="377.0" yPosition="417.0">
+    <Class name="Auto" package="viaje2021" visibility="public" xPosition="518.0" yPosition="456.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="public">
@@ -19,7 +19,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Camion" package="viaje2021" visibility="public" xPosition="358.0" yPosition="442.0">
+    <Class name="Camion" package="viaje2021" visibility="public" xPosition="121.0" yPosition="456.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="public">
@@ -35,7 +35,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Camioneta" package="viaje2021" visibility="public" xPosition="757.0" yPosition="428.0">
+    <Class name="Camioneta" package="viaje2021" visibility="public" xPosition="599.0" yPosition="453.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="public">
@@ -51,7 +51,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Ciudad" package="viaje2021" visibility="public" xPosition="-98.0" yPosition="115.0">
+    <Class name="Ciudad" package="viaje2021" visibility="public" xPosition="5.0" yPosition="125.0">
       <Fields>
         <Field name="km" type="int" visibility="private"/>
         <Field name="nombre" type="String" visibility="private"/>
@@ -80,7 +80,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Combustible" package="viaje2021" visibility="public" xPosition="792.0" yPosition="71.0">
+    <Class name="Combustible" package="viaje2021" visibility="public" xPosition="702.0" yPosition="149.0">
       <Fields>
         <Field name="tipoCombust" type="String" visibility="private"/>
         <Field name="precio" type="double" visibility="private"/>
@@ -102,7 +102,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Vehiculo" package="viaje2021" visibility="public" isAbstract="true" xPosition="325.0" yPosition="68.0">
+    <Class name="Vehiculo" package="viaje2021" visibility="public" isAbstract="true" xPosition="524.0" yPosition="149.0">
       <Fields>
         <Field name="marca" type="String" visibility="protected"/>
         <Field name="patente" type="String" visibility="protected"/>
@@ -135,7 +135,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="viaje" package="viaje2021" visibility="public" xPosition="-65.0" yPosition="22.0">
+    <Class name="viaje" package="viaje2021" visibility="public" xPosition="260.0" yPosition="115.0">
       <Fields>
         <Field name="origen" type="Ciudad" visibility="private"/>
         <Field name="destino" type="Ciudad" visibility="private"/>
@@ -186,12 +186,12 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <HasRelation name="tiene" source="viaje2021.viaje" target="viaje2021.Vehiculo" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
     <IsRelation name="is" source="viaje2021.Auto" target="viaje2021.Vehiculo"/>
-    <HasRelation name="tiene" source="viaje2021.viaje" target="viaje2021.Ciudad" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="tiene" source="viaje2021.viaje" target="viaje2021.Vehiculo" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="tiene" source="viaje2021.Vehiculo" target="viaje2021.Combustible" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
     <IsRelation name="is" source="viaje2021.Camion" target="viaje2021.Vehiculo"/>
     <IsRelation name="is" source="viaje2021.Camioneta" target="viaje2021.Vehiculo"/>
+    <HasRelation name="tiene" source="viaje2021.viaje" target="viaje2021.Ciudad" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
     <HasRelation name="destino" source="viaje2021.viaje" target="viaje2021.Ciudad" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
-    <HasRelation name="combustible" source="viaje2021.Vehiculo" target="viaje2021.Combustible" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejemplo">
+  <ClassDiagramComponents>
+    <Class name="Maniqui" package="" visibility="public" xPosition="261.0" yPosition="102.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="ropa" type="ArrayList" visibility="private"/>
+        <Field name="Brazo" type="ArrayList" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="agregarRopad" returnType="void" visibility="public"/>
+        <Method name="modelar" returnType="Foto" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pierna" package="" visibility="public" xPosition="577.0" yPosition="120.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Brazo" package="" visibility="public" xPosition="577.0" yPosition="216.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Ropa" package="" visibility="public" xPosition="154.0" yPosition="394.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Foto" package="" visibility="public" xPosition="419.0" yPosition="334.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Dueño" package="" visibility="public" xPosition="27.0" yPosition="114.0">
+      <Fields>
+        <Field name="maniquie" type="Manique" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="Maniqui" target="Brazo" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <UseRelation name="usa" source="Maniqui" target="Foto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tiene" source="Maniqui" target="Ropa" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="tiene" source="Dueño" target="Maniqui" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="tiene" source="Maniqui" target="Pierna" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

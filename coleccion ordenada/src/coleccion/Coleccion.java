@@ -24,8 +24,13 @@ public static void main(String[] args) {
 	lista.add(new Persona(21569856,"Antonio"));
 
 	System.out.println(lista);
-	Collections.sort(lista);
-	System.out.println(lista);
+        System.out.println("");
+        Collections.sort(lista, Persona.comparaNombre);
+         System.out.println(lista);
+          System.out.println("");
+        Collections.sort(lista, Persona.comparaDni);
+         System.out.println(lista);
+        
         
 
 

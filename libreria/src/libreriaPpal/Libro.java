@@ -90,7 +90,5 @@ public static Comparator<Libro> comparaTitulo = new Comparator<Libro>(){
     return l1.titulo.compareTo(l2.titulo);
     
     }
-    
-    
 };
 }
